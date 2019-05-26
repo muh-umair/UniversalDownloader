@@ -1,0 +1,32 @@
+PODS:
+  - Cache (5.2.0)
+  - Imaginary (4.2.0):
+    - Cache (~> 5.0)
+  - Lightbox (2.3.0):
+    - Imaginary (~> 4.0)
+  - ObjectMapper (3.4.2)
+  - UIScrollView-InfiniteScroll (1.1.0)
+
+DEPENDENCIES:
+  - Lightbox
+  - ObjectMapper (~> 3.4)
+  - UIScrollView-InfiniteScroll (~> 1.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cache
+    - Imaginary
+    - Lightbox
+    - ObjectMapper
+    - UIScrollView-InfiniteScroll
+
+SPEC CHECKSUMS:
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
+  Imaginary: dae33d06dbc2ada22f98afef5eb45cc061311a2c
+  Lightbox: d317750e4132bfb871a5307cfe0a2c7d6a583c65
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
+
+PODFILE CHECKSUM: d0ca426aa09442dc44ee5ecccd58c3db4a40b51b
+
+COCOAPODS: 1.6.0

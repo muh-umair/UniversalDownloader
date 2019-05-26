@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Images List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ImagesListViewController" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="UniversalDownloaderSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NxD-Hg-cOx">
+                                <rect key="frame" x="10" y="20" width="359" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Dhp-ar-dzn" customClass="ColletionViewLayout" customModule="UniversalDownloaderSample" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HVs-8X-Gl7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ON8-kl-hja"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhC-7Y-FHA" customClass="DotsAnimationView" customModule="UniversalDownloaderSample" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="56" width="200" height="12"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YCH-kh-MUa"/>
+                                    <constraint firstAttribute="height" constant="12" id="z73-Nc-Md0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dotsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dotsColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dotsDiameter">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dotsSpacing">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No images found yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFG-Jg-xgv">
+                                <rect key="frame" x="110.5" y="56" width="154.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XhC-7Y-FHA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KGZ-9p-oad"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NxD-Hg-cOx" secondAttribute="trailing" constant="6" id="Qf4-cn-8X6"/>
+                            <constraint firstItem="NxD-Hg-cOx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="SyM-P7-bXk"/>
+                            <constraint firstItem="NxD-Hg-cOx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xt1-kD-DAX"/>
+                            <constraint firstItem="XhC-7Y-FHA" firstAttribute="top" secondItem="NxD-Hg-cOx" secondAttribute="top" constant="36" id="crS-5B-iPp"/>
+                            <constraint firstItem="HFG-Jg-xgv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qzG-My-G2J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NxD-Hg-cOx" secondAttribute="bottom" id="ryD-ce-0C7"/>
+                            <constraint firstItem="HFG-Jg-xgv" firstAttribute="top" secondItem="XhC-7Y-FHA" secondAttribute="top" id="vSM-7E-kdI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collImages" destination="NxD-Hg-cOx" id="ISi-uq-lN6"/>
+                        <outlet property="lblNoImages" destination="HFG-Jg-xgv" id="X8i-gH-dx2"/>
+                        <outlet property="progressView" destination="XhC-7Y-FHA" id="7O2-vI-fV9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
